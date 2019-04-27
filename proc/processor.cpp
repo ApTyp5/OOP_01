@@ -95,7 +95,11 @@ Stage proc_move(figure &figure, const union action::args &action)
     {
         for (size_t i = 0; i < figure.pointNum; i++)
         {
-            point_move( *(figure.points + i), action.dArgs );
+            rc = point_move( *(figure.points + i), action.dArgs );
+            if (rc != Stage::AccordingToPlan)
+            {
+                break;
+            }
         }
     }
 
@@ -111,7 +115,11 @@ Stage proc_scale(figure &figure, const union action::args &action)
     {
         for (size_t i = 0; i < figure.pointNum; i++)
         {
-            point_scale( *(figure.points + i), action.dArgs );
+            rc = point_scale( *(figure.points + i), action.dArgs );
+            if (rc != Stage::AccordingToPlan)
+            {
+                break;
+            }
         }
     }
     return Stage::AccordingToPlan;
@@ -125,7 +133,11 @@ Stage proc_rotate(figure &figure, const union action::args &action)
     {
         for (size_t i = 0; i < figure.pointNum; i++)
         {
-            point_rotate( *(figure.points + i), action.dArgs );
+            rc = point_rotate( *(figure.points + i), action.dArgs );
+            if (rc != Stage::AccordingToPlan)
+            {
+                break;
+            }
         }
     }
 

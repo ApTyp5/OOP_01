@@ -49,9 +49,7 @@ Stage proc_action(procOutput &out, const action &action);
 // [2]
 Stage proc_load(figure &figure, const union action::args &args);
 Stage proc_save(figure &figure, const union action::args &action);
-
 Stage proc_transform(figure &figure, const action &action);
-
 Stage proc_move(figure &figure, const union action::args &action);
 Stage proc_scale(figure &figure, const union action::args &action);
 Stage proc_rotate(figure &figure, const union action::args &action);
@@ -62,8 +60,7 @@ Stage proc_make_projection(procOutput &out, const figure &figure, const veiwer&)
 Stage makeXProj(double &answer, const veiwer &veiwer, const Point3D &point);
 Stage makeYProj(double &answer, const veiwer &veiwer, const Point3D &point);
 
-
-
+// add ones
 Stage act_fig_center_init(union action::args &args, size_t pnum, Point3D *points);
 Stage act_revert(union action::args &args);
 
